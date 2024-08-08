@@ -81,3 +81,19 @@ header {
     height: 80%;
     width: auto;
 }
+
+/*Filter Popup*/
+#filter-category-container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+#filter-category-menu {
+    width: 95%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border: #B0B0B0 solid 1px;
+    border-radius: 10px;
+
+}
