@@ -6,7 +6,7 @@ function toggleFilter() {
     }
 }
 window.addEventListener('click', function(e){
-    if (!(document.getElementById("filter-category-menu").contains(e.target)) && !(document.getElementById("filter-button").contains(e.target))) {
+    if (!(document.getElementById("filter-button").contains(e.target))) {
         document.getElementById("filter-category-menu").classList.remove("showPopup")
     }
 });
