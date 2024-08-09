@@ -85,15 +85,32 @@ header {
 /*Filter Popup*/
 #filter-category-container {
     width: 100%;
-    height: 10%;
+    height: 55%;
     display: flex;
     justify-content: center;
 }
 #filter-category-menu {
     width: 95%;
-    height: 100%;
+    height: 30%;
     background-color: #FFFFFF;
     border: #B0B0B0 solid 1px;
     border-radius: 10px;
-
+}
+@media screen and (max-width: 1000px) {
+    #filter-category-menu {
+        width: 75%;
+        height: 100%;
+    }
+}
+/*Popup FadeIn/Out*/
+#filter-category-menu:not(.showPopup) {
+    visibility: hidden;
+}
+.showPopup {
+    visibility: visible;
+    animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
