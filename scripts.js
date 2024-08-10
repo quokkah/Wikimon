@@ -1,10 +1,13 @@
+//Filter Button Click-Detection
+let filterMenu = document.getElementById("filter-category-menu")
+let filterButton = document.getElementById("filter-button")
 document.addEventListener('click', function (event) {
-    if (!(document.getElementById("filter-category-menu").classList.contains("showPopup")) && document.getElementById("filter-button").contains(event.target)) {
-        document.getElementById("filter-category-menu").classList.add("showPopup")
+    if (!(filterMenu.classList.contains("showPopup")) && filterButton.contains(event.target)) {
+        filterMenu.classList.add("showPopup")
         console.log("show popup")
     } else {
-        if (!document.getElementById("filter-category-menu").contains(event.target)) {
-            document.getElementById("filter-category-menu").classList.remove("showPopup")
+        if (!filterMenu.contains(event.target)) {
+            filterMenu.classList.remove("showPopup")
             console.log("hide popup")
         } else {
             console.log("clicked inside popup")
