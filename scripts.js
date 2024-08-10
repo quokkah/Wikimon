@@ -1,12 +1,19 @@
-function toggleFilter() {
-    if (!(document.getElementById("filter-category-menu").classList.contains("showPopup"))) {
+document.addEventListener('click', function (event) {
+    if (!(document.getElementById("filter-category-menu").classList.contains("showPopup")) && document.getElementById("filter-button").contains(event.target)) {
         document.getElementById("filter-category-menu").classList.add("showPopup")
+        console.log("show popup")
     } else {
-        document.getElementById("filter-category-menu").classList.remove("showPopup")
-    }
-}
-window.addEventListener('click', function(e){
-    if (!(document.getElementById("filter-button").contains(e.target))) {
-        document.getElementById("filter-category-menu").classList.remove("showPopup")
+        if (!document.getElementById("filter-category-menu").contains(event.target)) {
+            document.getElementById("filter-category-menu").classList.remove("showPopup")
+            console.log("hide popup")
+        } else {
+            console.log("clicked inside popup")
+        }
     }
 });
+// document.addEventListener('click', function(event) {
+//     if (!(document.getElementById("filter-button").contains(event.target))) {
+//         document.getElementById("filter-category-menu").classList.remove("showPopup")
+//         console.log("clicked outside popup")
+//     }
+// });
